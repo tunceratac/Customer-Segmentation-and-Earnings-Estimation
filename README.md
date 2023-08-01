@@ -16,6 +16,7 @@ import pandas as pd
 
 # Load the data into a DataFrame
 df = pd.read_csv("persona.csv")
+```
 
 # Exploratory Data Analysis (EDA)
 Now, let's explore the dataset to understand its contents and characteristics.
