@@ -76,7 +76,7 @@ print("Average earnings breakdown by COUNTRY, SOURCE, SEX, and AGE:\n", average_
 # Customer Segmentation and Earnings Estimation
 We will create customer segments based on the breakdown of COUNTRY, SOURCE, SEX, and AGE. Then, we will estimate the average earnings for potential customers in each segment.
 
-```
+```python
 # Convert the numeric variable AGE to a categorical variable with intervals
 intervals = [0, 18, 23, 30, 40, 60, df["AGE"].max()]
 labels = ["0-18", "19-23", "24-30", "30-40", "40-60", "60+"]
