@@ -20,6 +20,7 @@ df = pd.read_csv("persona.csv")
 
 # Exploratory Data Analysis (EDA)
 Now, let's explore the dataset to understand its contents and characteristics.
+
 ```python
 # Check the shape of the DataFrame
 print("Shape of the DataFrame:", df.shape)
@@ -71,8 +72,10 @@ print("Average PRICE in the COUNTRY-SOURCE breakdown:\n", average_price_country_
 average_earnings_breakdown = df.pivot_table(values="PRICE", index=["COUNTRY", "SOURCE", "SEX", "AGE"], aggfunc="mean").head()
 print("Average earnings breakdown by COUNTRY, SOURCE, SEX, and AGE:\n", average_earnings_breakdown)
 ```
+
 # Customer Segmentation and Earnings Estimation
 We will create customer segments based on the breakdown of COUNTRY, SOURCE, SEX, and AGE. Then, we will estimate the average earnings for potential customers in each segment.
+
 ```
 # Convert the numeric variable AGE to a categorical variable with intervals
 intervals = [0, 18, 23, 30, 40, 60, df["AGE"].max()]
