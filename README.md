@@ -20,7 +20,7 @@ df = pd.read_csv("persona.csv")
 
 # Exploratory Data Analysis (EDA)
 Now, let's explore the dataset to understand its contents and characteristics.
-
+```python
 # Check the shape of the DataFrame
 print("Shape of the DataFrame:", df.shape)
 
@@ -70,10 +70,10 @@ print("Average PRICE in the COUNTRY-SOURCE breakdown:\n", average_price_country_
 # Average earnings breakdown by COUNTRY, SOURCE, SEX, and AGE
 average_earnings_breakdown = df.pivot_table(values="PRICE", index=["COUNTRY", "SOURCE", "SEX", "AGE"], aggfunc="mean").head()
 print("Average earnings breakdown by COUNTRY, SOURCE, SEX, and AGE:\n", average_earnings_breakdown)
-
+```
 # Customer Segmentation and Earnings Estimation
 We will create customer segments based on the breakdown of COUNTRY, SOURCE, SEX, and AGE. Then, we will estimate the average earnings for potential customers in each segment.
-
+```
 # Convert the numeric variable AGE to a categorical variable with intervals
 intervals = [0, 18, 23, 30, 40, 60, df["AGE"].max()]
 labels = ["0-18", "19-23", "24-30", "30-40", "40-60", "60+"]
@@ -122,7 +122,7 @@ user_average_earnings = agg_df[agg_df["LEVEL_BASED"] == user]["PRICE"]
 user_segment = agg_df[agg_df["LEVEL_BASED"] == user]["SEGMENT"]
 print("Average earnings expected from this user:", user_average_earnings.to_string(index=False))
 print("The expected revenue range from this user:", user_segment.to_string(index=False))
-
+```
 
 # Conclusion
 In this analysis, we created customer segments based on the breakdown of COUNTRY, SOURCE, SEX, and AGE. Then, we estimated the average earnings for potential customers in each segment. The game company can use this information to target different customer segments with appropriate marketing strategies and pricing.
